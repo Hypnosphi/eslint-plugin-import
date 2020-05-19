@@ -1,5 +1,6 @@
 {
-  "name": "eslint-plugin-import",
+  "name": "@hypnosphi/eslint-plugin-import",
+  "publishConfig": {"access": "public"},
   "version": "2.20.2",
   "description": "Import with sanity.",
   "engines": {
