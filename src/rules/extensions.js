@@ -1,8 +1,8 @@
 import path from 'path';
 
-import resolve from 'eslint-module-utils/resolve';
+import resolve from '@hypnosphi/eslint-module-utils/resolve';
 import { isBuiltIn, isExternalModule, isScoped, isScopedModule } from '../core/importType';
-import moduleVisitor from 'eslint-module-utils/moduleVisitor';
+import moduleVisitor from '@hypnosphi/eslint-module-utils/moduleVisitor';
 import docsUrl from '../docsUrl';
 
 const enumValues = { enum: [ 'always', 'ignorePackages', 'never' ] };
@@ -138,7 +138,7 @@ module.exports = {
     function checkFileExtension(source) {
       // bail if the declaration doesn't have a source, e.g. "export { foo };"
       if (!source) return;
-      
+
       const importPathWithQueryString = source.value;
 
       // don't enforce anything on builtins

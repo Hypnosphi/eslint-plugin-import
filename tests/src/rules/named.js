@@ -1,7 +1,7 @@
 import { test, SYNTAX_CASES, getTSParsers } from '../utils';
 import { RuleTester } from 'eslint';
 
-import { CASE_SENSITIVE_FS } from 'eslint-module-utils/resolve';
+import { CASE_SENSITIVE_FS } from '@hypnosphi/eslint-module-utils/resolve';
 
 
 const ruleTester = new RuleTester();

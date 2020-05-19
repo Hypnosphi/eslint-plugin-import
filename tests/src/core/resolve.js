@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
-import resolve, { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from 'eslint-module-utils/resolve';
-import ModuleCache from 'eslint-module-utils/ModuleCache';
+import resolve, { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from '@hypnosphi/eslint-module-utils/resolve';
+import ModuleCache from '@hypnosphi/eslint-module-utils/ModuleCache';
 
 import * as path from 'path';
 import * as fs from 'fs';

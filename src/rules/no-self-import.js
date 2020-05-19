@@ -3,8 +3,8 @@
  * @author Gio d'Amelio
  */
 
-import resolve from 'eslint-module-utils/resolve';
-import moduleVisitor from 'eslint-module-utils/moduleVisitor';
+import resolve from '@hypnosphi/eslint-module-utils/resolve';
+import moduleVisitor from '@hypnosphi/eslint-module-utils/moduleVisitor';
 import docsUrl from '../docsUrl';
 
 function isImportingSelf(context, node, requireName) {

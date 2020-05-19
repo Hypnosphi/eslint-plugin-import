@@ -3,9 +3,9 @@
  * @author Ben Mosher
  */
 
-import resolve, { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from 'eslint-module-utils/resolve';
-import ModuleCache from 'eslint-module-utils/ModuleCache';
-import moduleVisitor, { makeOptionsSchema } from 'eslint-module-utils/moduleVisitor';
+import resolve, { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from '@hypnosphi/eslint-module-utils/resolve';
+import ModuleCache from '@hypnosphi/eslint-module-utils/ModuleCache';
+import moduleVisitor, { makeOptionsSchema } from '@hypnosphi/eslint-module-utils/moduleVisitor';
 import docsUrl from '../docsUrl';
 
 module.exports = {

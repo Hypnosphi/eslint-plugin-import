@@ -6,13 +6,13 @@ import debug from 'debug';
 
 import { SourceCode } from 'eslint';
 
-import parse from 'eslint-module-utils/parse';
-import visit from 'eslint-module-utils/visit';
-import resolve from 'eslint-module-utils/resolve';
-import isIgnored, { hasValidExtension } from 'eslint-module-utils/ignore';
+import parse from '@hypnosphi/eslint-module-utils/parse';
+import visit from '@hypnosphi/eslint-module-utils/visit';
+import resolve from '@hypnosphi/eslint-module-utils/resolve';
+import isIgnored, { hasValidExtension } from '@hypnosphi/eslint-module-utils/ignore';
 
-import { hashObject } from 'eslint-module-utils/hash';
-import * as unambiguous from 'eslint-module-utils/unambiguous';
+import { hashObject } from '@hypnosphi/eslint-module-utils/hash';
+import * as unambiguous from '@hypnosphi/eslint-module-utils/unambiguous';
 
 import { tsConfigLoader } from 'tsconfig-paths/lib/tsconfig-loader';
 

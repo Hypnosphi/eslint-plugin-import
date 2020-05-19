@@ -2,7 +2,7 @@ import * as path from 'path';
 
 import { test, SYNTAX_CASES, testVersion } from '../utils';
 
-import { CASE_SENSITIVE_FS } from 'eslint-module-utils/resolve';
+import { CASE_SENSITIVE_FS } from '@hypnosphi/eslint-module-utils/resolve';
 
 import { RuleTester } from 'eslint';
 

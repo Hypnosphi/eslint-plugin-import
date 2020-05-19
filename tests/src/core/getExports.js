@@ -8,7 +8,7 @@ import ExportMap from '../../../src/ExportMap';
 import * as fs from 'fs';
 
 import { getFilename } from '../utils';
-import * as unambiguous from 'eslint-module-utils/unambiguous';
+import * as unambiguous from '@hypnosphi/eslint-module-utils/unambiguous';
 
 describe('ExportMap', function () {
   const fakeContext = {

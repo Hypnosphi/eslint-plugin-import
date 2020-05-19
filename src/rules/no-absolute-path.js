@@ -1,4 +1,4 @@
-import moduleVisitor, { makeOptionsSchema } from 'eslint-module-utils/moduleVisitor';
+import moduleVisitor, { makeOptionsSchema } from '@hypnosphi/eslint-module-utils/moduleVisitor';
 import { isAbsolute } from '../core/importType';
 import docsUrl from '../docsUrl';
 
