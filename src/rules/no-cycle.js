@@ -5,7 +5,7 @@
 
 import Exports from '../ExportMap'
 import { isExternalModule } from '../core/importType'
-import moduleVisitor, { makeOptionsSchema } from 'eslint-module-utils/moduleVisitor'
+import moduleVisitor, { makeOptionsSchema } from '@hypnosphi/eslint-module-utils/moduleVisitor'
 import docsUrl from '../docsUrl'
 
 // todo: cache cycles / deep relationships for faster repeat evaluation

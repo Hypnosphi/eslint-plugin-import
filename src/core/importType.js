@@ -1,6 +1,6 @@
 import coreModules from 'resolve/lib/core'
 
-import resolve from 'eslint-module-utils/resolve'
+import resolve from '@hypnosphi/eslint-module-utils/resolve'
 
 function baseModule(name) {
   if (isScoped(name)) {

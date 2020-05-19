@@ -5,8 +5,8 @@
  */
 
 import Exports from '../ExportMap'
-import { getFileExtensions } from 'eslint-module-utils/ignore'
-import resolve from 'eslint-module-utils/resolve'
+import { getFileExtensions } from '@hypnosphi/eslint-module-utils/ignore'
+import resolve from '@hypnosphi/eslint-module-utils/resolve'
 import docsUrl from '../docsUrl'
 import { dirname, join } from 'path'
 import readPkgUp from 'read-pkg-up'

@@ -1,6 +1,6 @@
 import path from 'path'
 
-import resolve from 'eslint-module-utils/resolve'
+import resolve from '@hypnosphi/eslint-module-utils/resolve'
 import { isBuiltIn, isExternalModule, isScoped, isScopedModule } from '../core/importType'
 import docsUrl from '../docsUrl'
 

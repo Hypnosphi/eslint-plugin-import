@@ -6,13 +6,13 @@ import debug from 'debug'
 
 import { SourceCode } from 'eslint'
 
-import parse from 'eslint-module-utils/parse'
-import visit from 'eslint-module-utils/visit'
-import resolve from 'eslint-module-utils/resolve'
-import isIgnored, { hasValidExtension } from 'eslint-module-utils/ignore'
+import parse from '@hypnosphi/eslint-module-utils/parse'
+import visit from '@hypnosphi/eslint-module-utils/visit'
+import resolve from '@hypnosphi/eslint-module-utils/resolve'
+import isIgnored, { hasValidExtension } from '@hypnosphi/eslint-module-utils/ignore'
 
-import { hashObject } from 'eslint-module-utils/hash'
-import * as unambiguous from 'eslint-module-utils/unambiguous'
+import { hashObject } from '@hypnosphi/eslint-module-utils/hash'
+import * as unambiguous from '@hypnosphi/eslint-module-utils/unambiguous'
 
 const log = debug('eslint-plugin-import:ExportMap')
 
@@ -571,8 +571,8 @@ ExportMap.parse = function (path, content, context) {
         'TSAbstractClassDeclaration',
         'TSModuleDeclaration',
       ]
-      const exportedDecls = ast.body.filter(({ type, id, declarations }) => 
-        declTypes.includes(type) && 
+      const exportedDecls = ast.body.filter(({ type, id, declarations }) =>
+        declTypes.includes(type) &&
         (id && id.name === exportedName || declarations.find(d => d.id.name === exportedName))
       )
       if (exportedDecls.length === 0) {
