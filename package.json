@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "2.20.3",
+  "version": "2.20.4",
   "description": "Import with sanity.",
   "engines": {
     "node": ">=4"
@@ -94,13 +94,13 @@
     "eslint": "^2 || ^3 || ^4 || ^5 || ^6 || ^7.0.0-0"
   },
   "dependencies": {
+    "@hypnosphi/eslint-module-utils": "^2.6.0",
     "array-includes": "^3.0.3",
     "array.prototype.flat": "^1.2.1",
     "contains-path": "^0.1.0",
     "debug": "^2.6.9",
     "doctrine": "1.5.0",
     "eslint-import-resolver-node": "^0.3.2",
-    "@hypnosphi/eslint-module-utils": "^2.6.0",
     "has": "^1.0.3",
     "minimatch": "^3.0.4",
     "object.values": "^1.1.0",
