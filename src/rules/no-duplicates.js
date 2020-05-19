@@ -1,4 +1,4 @@
-import resolve from 'eslint-module-utils/resolve'
+import resolve from '@hypnosphi/eslint-module-utils/resolve'
 import docsUrl from '../docsUrl'
 
 function checkImports(imported, context) {

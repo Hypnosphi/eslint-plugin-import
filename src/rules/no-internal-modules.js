@@ -1,6 +1,6 @@
 import minimatch from 'minimatch'
 
-import resolve from 'eslint-module-utils/resolve'
+import resolve from '@hypnosphi/eslint-module-utils/resolve'
 import importType from '../core/importType'
 import isStaticRequire from '../core/staticRequire'
 import docsUrl from '../docsUrl'
