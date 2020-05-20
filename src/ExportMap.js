@@ -354,30 +354,28 @@ ExportMap.parse = function (path, content, context) {
   let hasDynamicImports = false
 
   visit(ast, visitorKeys, {
-    CallExpression(node) {
-      if (node.callee.type === 'Import') {
-        hasDynamicImports = true
-        const firstArgument = node.arguments[0]
-        if (firstArgument.type !== 'Literal') {
-          return null
-        }
-        const p = remotePath(firstArgument.value)
-        if (p == null) {
-          return null
-        }
-        const importedSpecifiers = new Set()
-        importedSpecifiers.add('ImportNamespaceSpecifier')
-        const getter = thunkFor(p, context)
-        m.imports.set(p, {
-          getter,
-          source: {
-            // capturing actual node reference holds full AST in memory!
-            value: firstArgument.value,
-            loc: firstArgument.loc,
-          },
-          importedSpecifiers,
-        })
+    ImportExpression(node) {
+      hasDynamicImports = true
+      const source = node.source
+      if (source.type !== 'Literal') {
+        return null
       }
+      const p = remotePath(source.value)
+      if (p == null) {
+        return null
+      }
+      const importedSpecifiers = new Set()
+      importedSpecifiers.add('ImportNamespaceSpecifier')
+      const getter = thunkFor(p, context)
+      m.imports.set(p, {
+        getter,
+        source: {
+          // capturing actual node reference holds full AST in memory!
+          value: source.value,
+          loc: source.loc,
+        },
+        importedSpecifiers,
+      })
     },
   })
 

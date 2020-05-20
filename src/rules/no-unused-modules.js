@@ -12,6 +12,7 @@ import { dirname, join } from 'path'
 import readPkgUp from 'read-pkg-up'
 import values from 'object.values'
 import includes from 'array-includes'
+import visit from '@hypnosphi/eslint-module-utils/visit'
 
 // eslint/lib/util/glob-util has been moved to eslint/lib/util/glob-utils with version 5.3
 // and has been moved to eslint/lib/cli-engine/file-enumerator in version 6
@@ -644,6 +645,20 @@ module.exports = {
                oldImports.set(val, key)
              }
         })
+      })
+
+      visit(node, require('babel-eslint/lib/visitor-keys'), {
+        ImportExpression(child) {
+          const source = child.source
+          if (source.type !== 'Literal') {
+            return null
+          }
+          const p = resolve(source.value, context)
+          if (p == null) {
+            return null
+          }
+          newNamespaceImports.add(p)
+        },
       })
 
       node.body.forEach(astNode => {
