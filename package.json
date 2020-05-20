@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "2.20.5",
+  "version": "2.20.6",
   "description": "Import with sanity.",
   "engines": {
     "node": ">=4"
@@ -61,7 +61,7 @@
     "@typescript-eslint/parser": "^2.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^4.1.6",
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-preset-es2015-argon": "latest",
