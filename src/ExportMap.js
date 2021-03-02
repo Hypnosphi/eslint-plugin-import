@@ -357,6 +357,8 @@ ExportMap.parse = function (path, content, context) {
     return m // can't continue
   }
 
+  m.visitorKeys = visitorKeys
+
   let hasDynamicImports = false
 
   function processDynamicImport(source) {
