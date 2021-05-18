@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "2.22.1",
+  "version": "2.22.2",
   "description": "Import with sanity.",
   "engines": {
     "node": ">=4"
