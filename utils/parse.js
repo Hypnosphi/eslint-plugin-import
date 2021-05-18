@@ -8,10 +8,18 @@ const fs = require('fs')
 const log = require('debug')('eslint-plugin-import:parse')
 
 function getBabelVisitorKeys(parserPath) {
-  const hypotheticalLocation = parserPath.replace('index.js', 'visitor-keys.js')
-  if (fs.existsSync(hypotheticalLocation)) {
-    const keys = moduleRequire(hypotheticalLocation)
-    return keys.default || keys
+  if (parserPath.endsWith('index.js')) {
+    const hypotheticalLocation = parserPath.replace('index.js', 'visitor-keys.js')
+    if (fs.existsSync(hypotheticalLocation)) {
+      const keys = moduleRequire(hypotheticalLocation)
+      return keys.default || keys
+    }
+  } else if (parserPath.endsWith('index.cjs')) {
+    const hypotheticalLocation = parserPath.replace('index.cjs', 'worker/ast-info.cjs')
+    if (fs.existsSync(hypotheticalLocation)) {
+      const astInfo = moduleRequire(hypotheticalLocation)
+      return astInfo.getVisitorKeys()
+    }
   }
   return null
 }
